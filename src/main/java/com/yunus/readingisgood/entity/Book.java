@@ -23,6 +23,8 @@ public class Book {
 
 	private String name;
 
+	private Long price;
+
 	private String description;
 
 }

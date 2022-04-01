@@ -31,8 +31,6 @@ public class Order {
 	@Column(name = "id")
 	private Long id;
 
-	private String trackingNumber;
-
 	private int quantity;
 
 	private BigDecimal totalPrice;
