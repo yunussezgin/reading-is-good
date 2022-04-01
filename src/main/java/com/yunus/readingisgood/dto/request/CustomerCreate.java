@@ -37,8 +37,4 @@ public class CustomerCreate {
 	@NotBlank(message = "Customer phone must not be empty")
 	private String phone;
 
-	@NotNull(message = "Customer orders must not be null")
-	@Min(value = 1, message = "Customer must have at least one order")
-	private List<Order> orders;
-	
 }

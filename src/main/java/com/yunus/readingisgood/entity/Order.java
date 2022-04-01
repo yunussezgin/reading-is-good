@@ -2,7 +2,6 @@ package com.yunus.readingisgood.entity;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -17,6 +16,8 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,6 +25,7 @@ import lombok.Setter;
 @Setter
 @Table(name = "ORDERS")
 @Entity
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Order {
 
 	@Id
@@ -40,5 +42,5 @@ public class Order {
 
 	@JoinColumn(name = "FK_BOOK_ORDER")
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, targetEntity = Book.class)
-	private List<Book> books = new ArrayList<>();
+	private List<Book> books;
 }
