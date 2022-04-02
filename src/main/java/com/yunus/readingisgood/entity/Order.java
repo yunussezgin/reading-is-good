@@ -16,8 +16,6 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,7 +23,6 @@ import lombok.Setter;
 @Setter
 @Table(name = "ORDERS")
 @Entity
-@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Order {
 
 	@Id
